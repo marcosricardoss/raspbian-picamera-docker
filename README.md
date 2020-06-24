@@ -1,0 +1,1 @@
+A example of dockerize PiCamera application using a raspbian image.
