@@ -1,0 +1,14 @@
+version: '3'
+services:
+  docker-picamera-example:
+    build: .
+    image: marcosricardoss/docker-picamera:v1
+    container_name: docker-picamera-example 
+    environment:
+      FLASK_APP: app
+    command: python3 app.py
+    volumes:
+      - ./:/usr/src/app
+    devices: 
+      - /dev/vchiq:/dev/vchiq # PiCamera
+      - /dev/vcsm:/dev/vcsm # VideoCore Shared Memory (VCSM)
