@@ -7,6 +7,7 @@ services:
     environment:
       FLASK_APP: app
     command: python3 app.py
+    privileged: true
     volumes:
       - ./:/usr/src/app
     devices: 
