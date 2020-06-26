@@ -4,8 +4,6 @@ services:
     build: .
     image: marcosricardoss/docker-picamera:v1
     container_name: docker-picamera-example 
-    environment:
-      FLASK_APP: app
     command: python3 app.py
     privileged: true
     volumes:
