@@ -5,9 +5,9 @@ services:
     image: marcosricardoss/docker-picamera:v1
     container_name: docker-picamera-example 
     command: python3 app.py
-    privileged: true
     volumes:
       - ./:/usr/src/app
     devices: 
       - /dev/vchiq:/dev/vchiq # PiCamera
       - /dev/vcsm:/dev/vcsm # VideoCore Shared Memory (VCSM)
+    # privileged: true
